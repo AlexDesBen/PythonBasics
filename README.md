@@ -35,6 +35,7 @@ print("string of text")
 ### if, for & while
 
 The syntax is as follow
+if:
 ```
 if foo == bar:
   print("yes")
@@ -42,11 +43,15 @@ elif foo == "woody":
   print("Gone!!")
 else:
   print("Caribou!")
-
+```
+for:
+```
 L = ["spam","spamety","spamspam"]
 for element in L:
   print(element)
-
+```
+while:
+```
 i = 0
 while i < 3:
   print(L[i])
