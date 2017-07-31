@@ -102,18 +102,26 @@ class MyClass(ParentClass):                      # Leave empty of there is no ne
 ```
 in the code:
 ```
+################################################################################
+##### Definine usefull classes #################################################
+################################################################################
 class Human():
   def __init__(self, Name, Age):
     self.Name = Name
     self.Age = Age
   def setName(self,NewName):
-    self.Name = NewName.capitalise()  #Will change my name and make sure it's capitalised
-
-Moi = Human("Alex", 33)
-print(Moi.Age)                        # Will print my age, 33
-print(Moi.Name)                       # Will print my name, Alex
-Moi.setName("charles")                # Will change my name to Charles
-print(Moi.Name)                       # Will print my name, Charles
+    self.Name = NewName.capitalise()  # Will change my name and make sure it's 
+                                      # capitalised
+    
+################################################################################
+##### Main script ##############################################################
+################################################################################
+if __name__ == "__main__":
+  Moi = Human("Alex", 33)
+  print(Moi.Age)                        # Will print my age, 33
+  print(Moi.Name)                       # Will print my name, Alex
+  Moi.setName("charles")                # Will change my name to Charles
+  print(Moi.Name)                       # Will print my name, Charles
 ```
 
 
