@@ -82,7 +82,7 @@ def SomeFunction(argument1, argument2):
 ```
 and used like this in a script
 ```
-x = SomeFUnction(2, 3)
+x = SomeFunction(2, 3)
 print(x) # Would return (2+3)**2 = 25
 ```
 
@@ -92,12 +92,12 @@ In python you can define your own classes and inherit from other classes
 ```
 class MyClass(ParentClass):
   def __init__(self, arg1, arg2, arg3, ...):
-    ParentCLass.__init__(self, arg1, arg2, ...)
+    ParentClass.__init__(self, arg1, arg2, ...)
     self.stuff = arg1
     self.otherStuff = arg2
     self.lastBitOfStuff = arg3
-  def NewMethod(self):
-    self.stuff = self.stuff + 1
+  def NewMethod(self, SomeArgument):
+    self.stuff = SomeArgument
 ```
 
 
