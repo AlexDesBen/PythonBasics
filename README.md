@@ -39,8 +39,9 @@ In python, everything is an object. See documentation for information.
 Examples:
 ```
 x = "string of text"
-x.isalpha() #will return True
-x.isdigit() #will return False
-print(x.upper()) #will print string will all chars capitalised
-print(x.capitalised()) #will print string but with first char capitalised
+x.isalpha() # Will return True because all the chars in x are alpha
+x.isalnum() # Will return True because all the chars in x are alphanumerical
+x.isdigit() # Will return False because the chars in x are not all numbers
+print(x.upper()) # Will print string will all chars capitalised
+print(x.capitalised()) # Will print string but with first char capitalised
 ```
