@@ -14,6 +14,18 @@ import library as nickname
 from library import module
 from library import module as nickname
 ```
+With a library you can use all the modules and sub modules like this
+```
+library.module()
+library.module.submodules()
+```
+
+Never do 
+```
+from library import *
+```
+It imports the library directly in the script without namespace and might crush already imported modules.
+
 
 ### Printing to screen
 ```
