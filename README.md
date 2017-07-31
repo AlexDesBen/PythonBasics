@@ -35,6 +35,7 @@ print("string of text")
 ### if, for & while
 
 The syntax is as follow
+
 if:
 ```
 if foo == bar:
