@@ -32,6 +32,26 @@ It imports the library directly in the script without namespace and might crush 
 print("string of text")
 ```
 
+### if, for & while
+
+The syntax is as follow
+```
+if foo == bar:
+  print("yes")
+elif foo == "woody":
+  print("Gone!!")
+else:
+  print("Caribou!")
+
+L = ["spam","spamety","spamspam"]
+for element in L:
+  print(element)
+
+i = 0
+while i < 3:
+  print(L[i])
+  i += 1
+```
 ### Objects
 
 In python, everything is an object. See documentation for information.
@@ -45,3 +65,35 @@ x.isdigit() # Will return False because the chars in x are not all numbers
 print(x.upper()) # Will print string will all chars capitalised
 print(x.capitalised()) # Will print string but with first char capitalised
 ```
+
+### def
+
+In python you can define functions like this
+```
+def SomeFunction(argument1, argument2):
+  temp = argument1 + argument2 # Add both arguments
+  output = temp**2 # Square variable temp
+  return output # Return the value of the variable output
+```
+and used like this in a script
+```
+x = SomeFUnction(2, 3)
+print(x) # Would return (2+3)**2 = 25
+```
+
+### Class
+
+In python you can define your own classes and inherit from other classes
+```
+class MyClass(ParentClass):
+  def __init__(self, arg1, arg2, arg3, ...):
+    ParentCLass.__init__(self, arg1, arg2, ...)
+    self.stuff = arg1
+    self.otherStuff = arg2
+    self.lastBitOfStuff = arg3
+  def NewMethod(self):
+    self.stuff = self.stuff + 1
+```
+
+
+
