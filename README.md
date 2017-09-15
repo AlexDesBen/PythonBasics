@@ -1,128 +1,147 @@
 # PythonBasics
 
-## To launch:
-```
-cd ~/git/.../PythonBasics/script/folder
+## To run
+
+```shell
+git clone https://github.com/AlexDesBen/PythonBasics.git
+cd PythonBasics/script/HelloWorld/
+python Main.py
+cd ../ExampleNumpy/
 python Main.py
 ```
+
 ## To know
 
 ### Importing libraries
-```
+
+```python
 import library
 import library as nickname
 from library import module
 from library import module as nickname
 ```
-With a library you can use all the modules and sub modules like this
-```
+
+With a library you can use all the modules and sub modules like this :
+
+```python
 library.module()
 library.module.submodules()
 ```
 
-Never do 
-```
+Never do :
+
+```python
 from library import *
 ```
+
 It imports the library directly in the script without namespace and might crush already imported modules.
 
-
 ### Printing to screen
-```
+
+```python
 print("string of text")
 ```
 
-### if, for & while
+### `if`, `for` & `while`
 
-The syntax is as follow
+The syntax is as follow :
 
-if:
-```
-if foo == bar:
-  print("yes")
-elif foo == "woody":
-  print("Gone!!")
-else:
-  print("Caribou!")
-```
-for:
-```
-L = ["spam","spamety","spamspam"]
-for element in L:
-  print(element)
-```
-while:
-```
-i = 0
-while i < 3:
-  print(L[i])
-  i += 1
-```
+* `if` :
+	```python
+	if foo == bar:
+	  print("yes")
+	elif foo == "woody":
+	  print("Gone!!")
+	else:
+	  print("Caribou!")
+	```
+
+* `for` :
+	```python
+	L = ["spam", "spamety", "spamspam"]
+	for element in L:
+	  print(element)
+	```
+
+* `while` :
+	```python
+	i = 0
+	while i < 3:
+	  print(L[i])
+	  i += 1
+	```
+
 ### Objects
 
-In python, everything is an object. See documentation for information.
+With Python, everything is an object. See documentation for further information.
 
-Examples:
-```
+Examples :
+
+```python
 x = "string of text"
 x.isalpha()            # Will return True because all the chars in x are alpha
 x.isalnum()            # Will return True because all the chars in x are alphanumerical
 x.isdigit()            # Will return False because the chars in x are not all numbers
-print(x.upper())       # Will print string will all chars capitalised
-print(x.capitalised()) # Will print string but with first char capitalised
+print(x.upper())       # Will print string will all chars capitalized
+print(x.capitalize()) # Will print string but with first char capitalized
 ```
 
-### def
+### `def`
 
-In python you can define functions like this
-```
+In python you can define functions like this :
+
+```python
 def SomeFunction(argument1, argument2):
   temp = argument1 + argument2  # Add both arguments
   output = temp**2              # Square variable temp
   return output                 # Return the value of the variable output
 ```
-and used like this in a script
-```
+
+... and used them this way in a script :
+
+```python
 x = SomeFunction(2, 3)
 print(x) # Would return (2+3)**2 = 25
 ```
 
-### Class
+### `Class`
 
-In python you can define your own classes and inherit from other classes
-```
-class MyClass(ParentClass):                      # Leave empty of there is no need for a Parent class
+In python you can define your own classes, and inherit from other classes :
+
+```python
+class MyClass(ParentClass):  # Leave empty of there is no need for a Parent class
   def __init__(self, arg1, arg2, arg3, ...):
-    ParentClass.__init__(self, arg1, arg2, ...)
-    self.stuff = arg1
-    self.otherStuff = arg2
-    self.lastBitOfStuff = arg3
+	ParentClass.__init__(self, arg1, arg2, ...)
+	self.stuff = arg1
+	self.otherStuff = arg2
+	self.lastBitOfStuff = arg3
+
   def NewMethod(self, SomeArgument):
-    self.stuff = SomeArgument
+	self.stuff = SomeArgument
 ```
-in the code:
-```
+
+In the code :
+
+```python
 ################################################################################
-##### Definine usefull classes #################################################
+##### Definite useful classes ##################################################
 ################################################################################
 class Human():
   def __init__(self, Name, Age):
-    self.Name = Name
-    self.Age = Age
+	self.Name = Name
+	self.Age = Age
+
   def setName(self,NewName):
-    self.Name = NewName.capitalise()  # Will change my name and make sure it's 
-                                      # capitalised
-    
+  	# Will change my name and make sure it's capitalized
+	self.Name = NewName.capitalize()
+
 ################################################################################
 ##### Main script ##############################################################
 ################################################################################
 if __name__ == "__main__":
-  Moi = Human("Alex", 33)
-  print(Moi.Age)                        # Will print my age, 33
-  print(Moi.Name)                       # Will print my name, Alex
-  Moi.setName("charles")                # Will change my name to Charles
-  print(Moi.Name)                       # Will print my name, Charles
+  Me = Human("Alex", 33)
+  print(Me.Age)                        # Will print my age, 33
+  print(Me.Name)                       # Will print my name, Alex
+  Me.setName("charles")                # Will change my name to Charles
+  print(Me.Name)                       # Will print my name, Charles
 ```
-
-
-
